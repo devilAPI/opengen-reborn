@@ -1,9 +1,13 @@
-# opengen
+# opengen-reborn
 An open source account generator.
 ## Installation
-`git clone https://github.com/secremecy/opengen.git` or download directly through the GitHub repository.
+`https://github.com/devilAPI/opengen-reborn/releases/latest` and upload it to a php 7 server.
+## Coming Soon List
+- Admin Panel
+- Remove Accounts
+- Non-based htaccess login system (unlike now)
 ## Requirements
-A web server and PHP.
+A web server and PHP 7+.
 ## Features
 * AJAX
 * Easy to use
@@ -12,5 +16,3 @@ A web server and PHP.
 https://i.imgur.com/d39eauy.png
 ## Todo
 Add captcha and API rate limiting to prevent backend spam.
-## Donate
-Like what you're seeing? feel free to buy us a cup of coffee via Bitcoin `1G4zsUzBYJM4PCXV1qNrFW5DTrCyZLqoQF` 😎
