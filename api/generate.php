@@ -7,20 +7,24 @@
 
 	if ($type === 'Minecraft') {
 		$db = '../accounts/minecraft.txt';
-
 		$account = file($db, FILE_IGNORE_NEW_LINES);
 		echo $account[array_rand($account)];
-	} else if ($type === 'Spotify') {
-		$db = '../accounts/spotify.txt';
 
+	} 
+
+	else if ($type === 'NordVPN') {
+		$db = '../accounts/nordvpn.txt';
 		$account = file($db, FILE_IGNORE_NEW_LINES);
 		echo $account[array_rand($account)];
-	} else if ($type === 'Netflix') {
-		$db = '../accounts/netflix.txt';
+	} 
 
+	else if ($type === 'HTTP_Proxy') {
+		$db = '../accounts/HTTP_Proxy.txt';
 		$account = file($db, FILE_IGNORE_NEW_LINES);
 		echo $account[array_rand($account)];
-	} else {
-		echo 'Invalid account type selected.';
+	} 
+
+	else {
+		echo 'Invalid account type selected or no Alts in Stock.';
 	}
 ?>
