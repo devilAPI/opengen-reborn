@@ -19,12 +19,13 @@ $('#generate').click(function() {
 				});
 			}
 		});
-	} else if (account_type === 'Spotify') {
+	} 
+	else if (account_type === 'NordVPN') {
 		Pace.restart();
 		$.ajax({
 			type: 'GET',
 			dataType: 'text',
-			url: 'api/generate.php?type=Spotify',
+			url: 'api/generate.php?type=NordVPN',
 			success: function(data) {
 				Swal.fire({
 					type: 'success',
@@ -33,21 +34,25 @@ $('#generate').click(function() {
 				});
 			}
 		});
-	} else if (account_type === 'Netflix') {
+	}
+
+	else if (account_type === 'HTTP_Proxy') {
 		Pace.restart();
 		$.ajax({
 			type: 'GET',
 			dataType: 'text',
-			url: 'api/generate.php?type=Netflix',
+			url: 'api/generate.php?type=HTTP_Proxy',
 			success: function(data) {
 				Swal.fire({
 					type: 'success',
-					title: 'Here is your account',
+					title: 'Here is your proxy',
 					text: data
 				});
 			}
 		});
-	} else {
+	}
+	
+	else {
 		Pace.restart();
 		Swal.fire({
 			type: 'error',
@@ -55,4 +60,25 @@ $('#generate').click(function() {
 			text: 'Invalid account type selected.'
 		});
 	}
-});
+})
+
+$('#adduser').click(function() {
+	let user = document.getElementById('usr').value;
+	let pass = document.getElementById('pwd').value;
+
+	Pace.restart();
+	$.ajax({
+		type: 'GET',
+		dataType: 'text',
+		url: 'api/newuser.php?name=' + user + '&pass=' + pass,
+		success: function() {
+			Swal.fire({
+				type: 'success',
+				title: "",
+				text: 'Successfully added user ' + user + '!',
+			});
+		}
+	});
+}
+
+);;
