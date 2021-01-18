@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>opengen</title>
+		<title>devilAPI's Account Space</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-flash.min.css">
 		<link rel="stylesheet" href="assets/css/main.css">
@@ -13,23 +13,42 @@
 		<noscript>Please enable JavaScript to proceed.</noscript>
 		<div class="container">
 			<div class="jumbotron text-center">
-				<h2 class="display-4">opengen</h2>
-				<p class="lead">An open source account generator.</p>
+				<h2 class="display-4">Account Generator</h2>
+				<p class="lead">Generate Accounts!</p>
 				<form class="text-left" id="generator">
 					<div class="form-group">
 						<label for="type">Account type:</label>
 						<select class="form-control" id="type">
 							<option value="Minecraft">Minecraft</option>
-							<option value="Spotify">Spotify</option>
-							<option value="Netflix">Netflix</option>
+							<option value="NordVPN">NordVPN</option>
+							<option value="HTTP_Proxy">HTTP Proxy</option>
 						</select>
 					</div>
 					<button class="btn btn-dark btn-lg" id="generate">Generate</button>
 					<p class="pt-3">Or you can call the API using <code>/api/generate.php?type=</code></p>
 				</form>
+
+				<h2 class="display-4">Add User</h2>
+				<p class="lead">Add a User to the UserList!</p>
+				<form class="text-left" id="generator">
+					<div class="form-group">
+						<div class="form-group">
+							<label for="usr">Name:</label>
+							<input type="text" class="form-control" id="usr">
+						  </div>
+						  <div class="form-group">
+							<label for="pwd">Password (SHA1 Encrypted):</label>
+							<input type="password" class="form-control" id="pwd">
+						  </div>
+					</div>
+					<button class="btn btn-dark btn-lg" id="adduser">Add User!</button>
+					<p class="pt-3">Or you can call the API using <code>/api/newuser.php?name=&pass=</code></p>
+				</form>
 			</div>
 		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 		<script async src="assets/js/main.js"></script>
