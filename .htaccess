@@ -1,1 +1,4 @@
-
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /hp/af/ag/mh/www/altgen/api/.htpasswd
+Require valid-user
